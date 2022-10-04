@@ -23,13 +23,18 @@ useEffect(() => {
         setAllPosts(data)
     }
     getPosts()
-}, [])
+}, [postsNumber])
+
+const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    setPostsNumber(+e.target.value)
+}
 
   return (
     <div className='posts__container'>
     <div>
-        <label htmlFor="posts">Nombre de publications</label>
-        <input type="range" min={1} max={20} />
+        <label htmlFor="posts">Nombre de publications {postsNumber}</label>
+        <input type="range" min={1} max={20} onChange={handleChange} />
+        <PostsList allPosts={allPosts}/>
     </div>
     </div>
   )
