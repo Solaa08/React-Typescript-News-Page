@@ -1,0 +1,12 @@
+.post__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.post__container {
+    width: 60%;
+}

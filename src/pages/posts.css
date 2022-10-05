@@ -1,0 +1,18 @@
+.posts__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+label {
+    color: #0e1e44;
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 20%;
+}

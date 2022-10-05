@@ -1,7 +1,7 @@
 import React from 'react'
 import { PostsData } from '../interfaces/postData'
 import {useNavigate} from 'react-router-dom'
-import 'postsList.css'
+import './postsList.css'
 
 interface PostsListProps {
     allPosts : PostsData[] | null
@@ -9,15 +9,15 @@ interface PostsListProps {
 
 const PostsList: React.FC<PostsListProps> = ({ allPosts }) => {
     
-    const navigate = useNavigate
+    const navigate = useNavigate()
 
 
   return (
     <div>
-        <ul className='Posts'>
+        <ul className='posts'>
             {allPosts?.map(post => (
-                <li key={post.id}>
-                    <h2>{post.title}</h2>
+                <li key={post.id} onClick={() => navigate(`/${post.id}`)}>
+                    <h1>{post.title}</h1>
                     <p>Lire l'article</p>
                 </li>
             ))}
